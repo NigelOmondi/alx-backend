@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SFU Caching
+SFU Caching Module
 """
 from base_caching import BaseCaching
 import time
