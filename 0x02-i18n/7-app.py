@@ -9,7 +9,7 @@ import pytz
 
 
 class Config:
-    LANGUAGES = ["en", "fr" ]
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
@@ -26,7 +26,7 @@ users = {
 }
 
 
-def get_user () -> Union[Dict, None]:
+def get_user() -> Union[Dict, None]:
     login_id = request.args.get('login_as', '')
     if login_id:
         return users.get(int(login_id), None)
@@ -74,7 +74,6 @@ def get_timezone() -> str:
 @app.route('/')
 def get_index() -> str:
     return render_template('7-index.html')
-
 
 
 if __name__ == '__main__':
